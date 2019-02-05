@@ -14,7 +14,7 @@ export class BComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.service.obsMessage$.subscribe((data) => {
+    this.service.emitterSource$.subscribe((data) => {
       this.message = data;
     });
   }

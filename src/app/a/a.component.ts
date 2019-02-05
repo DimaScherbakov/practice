@@ -11,7 +11,7 @@ export class AComponent implements OnInit {
   constructor(private service: CService) { }
 
   ngOnInit() {
-    this.service.obsMessage$.subscribe((data) => {
+    this.service.emitterSource$.subscribe((data) => {
       this.message = data;
     })
     setTimeout(() => {
